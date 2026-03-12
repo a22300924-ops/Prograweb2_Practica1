@@ -1,0 +1,19 @@
+<main>
+  <header class="header">
+    <h1>El Mundo de las Guitarras</h1>
+    <p>Productos disponibles: {{ inStockCount() }}</p>
+  </header>
+
+  @if (products().length === 0) {
+    <p>Cargando productos...</p>
+  } @else {
+    <section class="grid">
+      @for (p of products(); track p.id) {
+        <app-product-card [product]="p" (add)="agregar($event)"></app-product-card>
+      }
+    </section>
+  }
+
+  <hr class="sep" />
+  <app-carrito></app-carrito>
+</main>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<productos>
+  <producto>
+    <id>1</id>
+    <nombre>Guitarra Acústica Fender</nombre>
+    <precio>8500</precio>
+    <descripcion>Guitarra acústica de calidad profesional con cuerpo de pino</descripcion>
+    <categoria>Guitarras</categoria>
+    <imagen>https://imgs.search.brave.com/RbdLEepzWOpb_uNQD9hpA-fPJaPVUJyCPDYVnS7Hgwg/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tdXNp/Y29wb2xpeC5jb20v/MTY0MjQ4LWhvbWVf/ZGVmYXVsdC8wOTcx/MjEwNzIxLmpwZw</imagen>
+    <disponible>true</disponible>
+  </producto>
+  <producto>
+    <id>2</id>
+    <nombre>Guitarra Eléctrica Ibanez</nombre>
+    <precio>12000</precio>
+    <descripcion>Guitarra eléctrica ideal para rock y metal con micrófono humbucker</descripcion>
+    <categoria>Guitarras</categoria>
+    <imagen>https://imgs.search.brave.com/BcNT19MYvP1shKpOqY7JWje8GEmeRkHMwbszEWAuEsI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9hdWRp/b211c2ljYS52dGV4/YXNzZXRzLmNvbS9h/cnF1aXZvcy9pZHMv/MTYxMDU0LTMwMC0z/MDA_dj02Mzg0MzAw/MjczMzU0MDAwMDAm/d2lkdGg9MzAwJmhl/aWdodD0zMDAmYXNw/ZWN0PXRydWU</imagen>
+    <disponible>true</disponible>
+  </producto>
+  <producto>
+    <id>3</id>
+    <nombre>Cuerdas D'Addario 10-46</nombre>
+    <precio>250</precio>
+    <descripcion>Juego de cuerdas de acero niquelado para guitarra eléctrica</descripcion>
+    <categoria>Cuerdas</categoria>
+    <imagen>https://imgs.search.brave.com/MUmm0QP7mpcqU1nxMq7gEeCHeE3i4J-YYLUg9yg_8JY/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjExeTVxc2l4VlMu/anBn</imagen>
+    <disponible>true</disponible>
+  </producto>
+  <producto>
+    <id>4</id>
+    <nombre>Púas Dunlop Tortex</nombre>
+    <precio>80</precio>
+    <descripcion>Púas de nylon resistente, paquete de 12 piezas</descripcion>
+    <categoria>Púas</categoria>
+    <imagen>https://imgs.search.brave.com/uZ2HkmdenIkcBV2vKvFvybIyC3ox19vi89GJ-CIizSg/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/XzkyNTQzMy1NTE04/ODk4OTU0OTAwMl8w/ODIwMjUtVi01LXBs/dW1pbGxhcy10b3J0/ZXgtMTAwLWR1bmxv/cC1wdWFzLWd1aXRh/cmlzdC1ob3VzZS53/ZWJw</imagen>
+    <disponible>true</disponible>
+  </producto>
+  <producto>
+    <id>5</id>
+    <nombre>Ampificador Marshal MG30</nombre>
+    <precio>4500</precio>
+    <descripcion>Ampificador de 30 watts con efectos integrados</descripcion>
+    <categoria>Ampificadores</categoria>
+    <imagen>https://imgs.search.brave.com/aiZTlbvPKB_o_LwCaSSc3_IiQ7jA3b5QqgQ_ZFIITOM/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9OUV9OUF83/ODM1OTUtTUxNMjgw/OTM3MjQ0MzdfMDky/MDE4LVYud2VicA</imagen>
+    <disponible>true</disponible>
+  </producto>
+  <producto>
+    <id>6</id>
+    <nombre>Correa de Cuero Levys</nombre>
+    <precio>450</precio>
+    <descripcion>Correa de cuero premium para guitarra, ajustable</descripcion>
+    <categoria>Accesorios</categoria>
+    <imagen>https://imgs.search.brave.com/XrwoHRCugwZ32jEimmKdBEyBeYpqvVPznrxApM3u2w4/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLmVi/YXlpbWcuY29tL2lt/YWdlcy9nL1ZKRUFB/ZVN3SWFScGowMTMv/cy1sNDAwLndlYnA</imagen>
+    <disponible>true</disponible>
+  </producto>
+  <producto>
+    <id>7</id>
+    <nombre>Afinador Electrónico Cromático</nombre>
+    <precio>350</precio>
+    <descripcion>Afinador digital con pantalla LCD y pinza</descripcion>
+    <categoria>Accesorios</categoria>
+    <imagen>https://imgs.search.brave.com/k7bQq_vYEaeOdQkkVxXSGtHhrci65HxJ2-d-P6ccEmk/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/XzYwNjc1NS1NTE03/MjEzMDMxNzE1N18x/MDIwMjMtVi1hZmlu/YWRvci1lbGVjdHJv/bmljby1jcm9tYXRp/Y28tbmVncm8ud2Vi/cA</imagen>
+    <disponible>true</disponible>
+  </producto>
+  <producto>
+    <id>8</id>
+    <nombre>Funda para Guitarra</nombre>
+    <precio>600</precio>
+    <descripcion>Funda acolchonada con cierre y bolsillo</descripcion>
+    <categoria>Fundas</categoria>
+    <imagen>https://imgs.search.brave.com/MU1G9cH4sGOufaug1m80LCuz7LUffSKq3m1fWJUjXIM/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9nYmFt/dXNpYy5jb20ubXgv/Y2RuL3Nob3AvcHJv/ZHVjdHMvR0JBLTAw/MzItaWNiMTAxXzUx/Mng1MTIuanBnP3Y9/MTYzMTgwODUxOA</imagen>
+    <disponible>true</disponible>
+  </producto>
+</productos>

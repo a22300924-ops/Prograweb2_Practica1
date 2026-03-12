@@ -1,0 +1,122 @@
+.card {
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(145deg, #1e3a5f 0%, #0d2137 100%);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+}
+
+.img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  object-position: center;
+  background: #0a1628;
+  border-bottom: 3px solid #e94560;
+}
+
+.body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.3;
+}
+
+.price {
+  font-weight: 700;
+  font-size: 20px;
+  color: #e94560;
+  white-space: nowrap;
+}
+
+.meta {
+  margin: 0;
+  font-size: 13px;
+  color: #7eb8da;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.desc {
+  margin: 0;
+  font-size: 14px;
+  color: #b8c5d6;
+  line-height: 1.5;
+}
+
+.stock {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #4ade80;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.stock::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #4ade80;
+  border-radius: 50%;
+}
+
+.stock.out {
+  color: #f87171;
+}
+
+.stock.out::before {
+  background: #f87171;
+}
+
+.btn {
+  margin-top: auto;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #e94560 0%, #c23a51 100%);
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #ff6b6b 0%, #e94560 100%);
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(233, 69, 96, 0.4);
+}
+
+.btn:disabled {
+  background: #4a5568;
+  color: #718096;
+  cursor: not-allowed;
+}
