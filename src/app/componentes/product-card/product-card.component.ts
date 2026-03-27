@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Product } from '../../modelos/product.model';
+import { Producto } from '../../modelos/product.model';
 
 @Component({
   selector: 'app-product-card',
@@ -9,8 +9,8 @@ import { Product } from '../../modelos/product.model';
   styleUrls: ['./product-card.component.css'],
 })
 export class ProductCardComponent {
-  @Input({ required: true }) product!: Product;
-  @Output() add = new EventEmitter<Product>();
+  @Input({ required: true }) product!: Producto;
+  @Output() add = new EventEmitter<Producto>();
 
   onAdd() {
     this.add.emit(this.product);

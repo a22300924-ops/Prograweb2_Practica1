@@ -1,6 +1,6 @@
-import { Component, computed, signal } from '@angular/core';
-import { Product } from '../../modelos/product.model';
-import { ProductsService } from '../../servicios/products.service';
+import { Component, computed, signal, inject, OnInit } from '@angular/core';
+import { Producto } from '../../modelos/product.model';
+import { ProductsService } from '../../servicios/productos.service';
 import { CarritoService } from '../../servicios/carrito.service';
 import { SearchService } from '../../servicios/search.service';
 import { ProductCardComponent } from '../product-card/product-card.component';
@@ -12,8 +12,14 @@ import { ProductCardComponent } from '../product-card/product-card.component';
   templateUrl: './catalogo.component.html',
   styleUrls: ['./catalogo.component.css'],
 })
-export class CatalogoComponent {
-  products = signal<Product[]>([]);
+export class CatalogoComponent implements OnInit {
+  private productosService = inject(ProductsService);
+  private searchService = inject(SearchService);
+  private carritoService = inject(CarritoService);
+  
+  productos: Producto[] = [];
+  products = signal<Producto[]>([]);
+  
   inStockCount = computed(() => this.filteredProducts().filter(p => p.inStock).length);
 
   filteredProducts = computed(() => {
@@ -25,18 +31,31 @@ export class CatalogoComponent {
     );
   });
 
-  constructor(
-    private productsService: ProductsService,
-    private carritoService: CarritoService,
-    private searchService: SearchService
-  ) {
-    this.productsService.getAll().subscribe({
-      next: (data) => this.products.set(data),
-      error: (err) => console.error('Error cargando XML:', err),
+  ngOnInit(): void {
+    // Intentar obtener productos del backend primero
+    this.productosService.getProductos().subscribe({
+      next: (data) => {
+        this.productos = data;
+        this.products.set(data);
+        console.log('Productos del backend:', data);
+        console.log('Total de productos cargados:', data.length);
+      },
+      error: (err) => {
+        console.error('Error del backend, usando datos locales:', err);
+        // Fallback: usar getAll() que lee del XML o datos mock
+        this.productosService.getAll().subscribe({
+          next: (data) => {
+            this.productos = data;
+            this.products.set(data);
+            console.log('Productos locales (XML/Mock):', data);
+            console.log('Total de productos cargados:', data.length);
+          }
+        });
+      }
     });
   }
 
-  agregar(producto: Product) {
+  agregar(producto: Producto) {
     this.carritoService.agregar(producto);
   }
 }

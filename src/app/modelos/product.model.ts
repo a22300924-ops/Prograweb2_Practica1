@@ -1,4 +1,4 @@
-export interface Product {
+export interface Producto {
   id: number;
   name: string;
   price: number;
@@ -8,6 +8,6 @@ export interface Product {
   inStock: boolean;
 }
 
-export interface CartItem extends Product {
+export interface CartItem extends Producto {
   quantity: number;
 }

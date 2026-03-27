@@ -2,8 +2,8 @@ import { Component, computed, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CarritoService } from '../../servicios/carrito.service';
-import { ProductsService } from '../../servicios/products.service';
-import { Product } from '../../modelos/product.model';
+import { ProductsService } from '../../servicios/productos.service';
+import { Producto } from '../../modelos/product.model';
 import { SearchService } from '../../servicios/search.service';
 
 @Component({
@@ -15,7 +15,7 @@ import { SearchService } from '../../servicios/search.service';
 })
 export class NavbarComponent {
   searchTerm = signal('');
-  products = signal<Product[]>([]);
+  products = signal<Producto[]>([]);
   showResults = signal(false);
 
   cartCount = computed(() => this.carritoService.cantidadTotal());
@@ -52,7 +52,7 @@ export class NavbarComponent {
     setTimeout(() => this.showResults.set(false), 200);
   }
 
-  selectProduct(product: Product) {
+  selectProduct(product: Producto) {
     this.searchTerm.set(product.name);
     this.searchService.setSearchTerm(product.name);
     this.showResults.set(false);

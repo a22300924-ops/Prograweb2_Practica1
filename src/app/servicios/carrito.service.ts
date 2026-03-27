@@ -1,5 +1,5 @@
 import { Injectable, signal } from '@angular/core';
-import { Product, CartItem } from '../modelos/product.model';
+import { Producto, CartItem } from '../modelos/product.model';
 
 @Injectable({ providedIn: 'root' })
 export class CarritoService {
@@ -9,7 +9,7 @@ export class CarritoService {
   // Exponer como readonly
   productos = this.productosSignal.asReadonly();
 
-  agregar(producto: Product) {
+  agregar(producto: Producto) {
     this.productosSignal.update(lista => {
       const existente = lista.find(p => p.id === producto.id);
       if (existente) {
